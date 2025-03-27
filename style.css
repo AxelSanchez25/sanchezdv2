@@ -1,0 +1,522 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+@font-face {
+    font-family: big;
+    src: url(fuentestx/Big_Shoulders_Stencil/BigShouldersStencil-VariableFont_opsz\,wght.ttf);
+}
+
+@font-face {
+    font-family: roboto;
+    src: url(fuentestx/Roboto/Roboto-VariableFont_wdth\,wght.ttf);
+}
+
+@font-face {
+    font-family: Poppins;
+    src: url(fuentestx//Poppins/Poppins-Light.ttf);
+}
+
+body {
+    background-color: rgba(0, 0, 0, 0.945);
+    font-family: Poppins;
+    color: white;
+}
+
+/*este es el fondo */
+canvas {
+    position: absolute;
+    filter: brightness(70%);
+    z-index: -1;
+}
+
+.header {
+    position: fixed;
+    z-index: 4;
+}
+
+.nav-left img {
+    height: 1.2em;
+}
+
+.title-nav {
+	color:white;
+	font-size: 160px;
+	font-weight: bold;
+	overflow: hidden;
+	position: relative;
+	padding: 10px;
+	text-transform: uppercase;
+	animation: 4s ease infinite reverse glow;
+}
+
+
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    padding: 1em;
+    color: white;
+    background-color: #000000;
+}
+
+
+.nav ul {
+    list-style: none;
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    flex-direction: row;
+    width: 102em;
+}
+
+.nav-right li {
+    width: 15em;
+    transition: all 0.3s ease;
+
+}
+
+.nav-right a {
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 0.5em;
+    font-family: roboto;
+    letter-spacing: 3px;
+
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    flex-direction: row;
+    width: 100%;
+
+}
+
+.nav-left li {
+    text-transform: capitalize;
+    font-family: big;
+    font-size: 2.5em;
+    letter-spacing: 3px;
+
+}
+
+.nav-right a:hover {
+    border-bottom: 2px solid rgb(121, 0, 202);
+    color: #923ef1;
+    transition: all 0.8s ease;
+
+}
+
+.nav-right li:hover {
+    transform: translateY(-4px);
+   
+}
+.active {
+    border-bottom: 2px solid rgb(121, 0, 202);/* Cambia el fondo del enlace */
+    color: #923ef1; /* Cambia el color del texto */
+   
+  }
+  
+
+
+.bienvenida {
+    height: 100vh;
+    width: auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-items: center;
+}
+
+.bienvenida img {
+    height: 100%;
+    width: 100%;
+    filter: brightness(40%);
+}
+
+
+.word { 
+    border-bottom: 4px solid #5500b6;
+    position: absolute;
+    bottom: 5em;
+    font-family: roboto;
+    font-size: 60px;
+    color: rgb(255, 255, 255);
+    line-height: 1.4em;
+    height: 1.4em;
+    padding: 0 14px 0 7px;
+    display: inline-block;
+    vertical-align: middle;
+    text-transform: capitalize;
+  }
+  
+  .word:before {
+    content: '';
+    background-color: rgb(253, 253, 253);
+    width: 1px;
+    position: absolute;
+    top: 5px;
+    bottom: 5px;
+    right: 7px;
+  }
+
+
+
+.scroll-down {
+    position: absolute !important;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 2rem;
+    color: white;
+    text-decoration: none;
+    animation: bounce 2s infinite;
+    z-index: 3;
+
+}
+
+/* animar el scroll-down*/
+@keyframes bounce {
+
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        transform: translateX(-50%) translateY(0);
+    }
+
+    40% {
+        transform: translateX(-50%) translateY(-30px);
+    }
+
+    60% {
+        transform: translateX(-50%) translateY(-15px);
+    }
+}
+
+.pres {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 5em;
+}
+
+.pres h4 {
+    color: white;
+    text-transform: uppercase;
+    line-height: 2em;
+    font-size: 1em;
+    letter-spacing: 6px;
+
+}
+
+.pres-logo strong {
+    color: white;
+    text-transform: capitalize;
+    font-size: 5em;
+    font-family: big;
+    letter-spacing: 10px;
+
+
+}
+
+.pres-logo img {
+    height: 5em;
+}
+
+.pres-logo {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+
+#carrusel {
+    position: relative;
+    width: 100%;
+    height: 40em;
+    /* Ajusta según tus necesidades */
+    overflow: hidden;
+    z-index: 1;
+}
+
+.carrusel-container {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carrusel-slide {
+    min-width: 100%;
+    height: 40em;
+
+}
+
+.carrusel-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Esto hará que la imagen cubra todo el espacio disponible
+    El object-fit: cover asegurará que la imagen llene todo el espacio del slide sin
+     distorsionarse, recortando las partes que sobresalgan. Si prefieres ver la imagen 
+    completa y que se ajuste al contenedor, puedes usar object-fit: contain en su lugar. */
+    object-position: center above;
+    /* Centra la imagen */
+    filter: brightness(80%);
+    overflow: hidden;
+
+}
+
+/* .carrusel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+} */
+
+
+.des-carrusel {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 10em;
+}
+
+.de-carrusel p {
+    color: white;
+    font-size: 1.3em;
+    width: 50em;
+    text-transform: capitalize;
+    letter-spacing: 3px;
+
+}
+
+.fondo-section {
+    background-image: url(img/_SAM1956.png);
+    filter: brightness(40%);
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+.eje-left {
+    height: 20em;
+    width: auto;
+  
+
+}
+
+.cards-prods {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(0, 0, 0);
+    position: relative;
+    width: 24em;
+    height: 35em;
+    margin: 2em;
+    box-shadow: 1px 1px 20px rgba(84, 0, 168, 0.511);
+}
+
+.cards-prods img{
+    height: 15em;
+}
+
+.cards-prod {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.cards-prod h2 {
+    text-transform: capitalize;
+    margin: 1em;
+}
+
+.cards-prod p {
+    text-transform: capitalize;
+    font-size: 1em;
+    margin: 1em;
+}
+
+.btn-cards {
+    position: absolute;
+    top: 30em;
+    left: 1em;
+
+}
+
+.btn-cards a {
+    text-decoration: none;
+    text-transform: capitalize;
+    font-size: 1.2em;
+    background-color: rgb(121, 0, 202);
+    padding: 0.5em;
+    color: white;
+}
+
+.btn-cards a:hover {
+    background-color:#923ef1;
+}
+
+/*pagina sobre mi */
+
+.section-bienvenida2 {
+    background-image: url(img/_SAM2228.jpg);
+    background-position: top;
+    background-size: cover;
+    filter: brightness(60%);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+
+}
+
+.bienvenida2 {
+    display: flex;
+    align-items: right;
+    padding-left: 20em;
+    flex-direction: column;
+    height: 35em;
+    justify-content: center;
+}
+
+.bienvenida2 h4 {
+    font-size: 3em;
+    color: white;
+    text-transform: capitalize;
+    font-family: roboto;
+    line-height: 1.4em;
+    letter-spacing: 3px;
+}
+
+.presentacion2 {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 4em;
+}
+
+.pres2 {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+
+.pres2 img {
+    height: 25em;
+    width: 25em;
+    padding:1em;
+    border: 4px solid #5500b6;
+    margin-left: 15em;
+    border-radius: 50%;
+    background-position: center;
+}
+
+.pres2 p {
+    color: white;
+    width: 50em;
+    font-size: 1.3em;
+    text-transform: capitalize;
+    line-height: 1.5em;
+    letter-spacing: 3px;
+    padding: 1em;
+}
+
+.fondo-section2 {
+    background-image: url(img/_SAM2228.jpg);
+    filter: brightness(60%);
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+.eje-left2 {
+    height: 20em;
+    width: auto;
+    color: white;
+
+}
+.presentacion3 {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 4em;
+}
+
+.pres3 {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.pres3 p{
+    width: 50em;
+    font-size: 1.3em;
+    text-transform: capitalize;
+    line-height: 1.5em;
+    letter-spacing: 3px;
+    padding: 1em;
+}
+
+/*foooter*/
+.footer{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgb(0, 0, 0);
+}
+
+.footer1{
+    height: 5em;
+    display: flex;
+    align-items: center;
+}
+
+/*blogs*/
+.section-reflexiones{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    height: 40em;
+}
+
+.reflexiones{
+    text-align: center;
+    text-transform: uppercase;
+    padding: 1em;
+}
+
