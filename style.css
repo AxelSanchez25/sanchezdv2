@@ -318,13 +318,13 @@ canvas {
 }
 
 .fondo-section {
-    background-image: url(img/IMG_SAM1956.png);
+    background-image: url(img/IMG_SAM1980.jpg);
     filter: brightness(40%);
     background-position: center;
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
-
+       -webkit-transform: translateZ(-1); /* Soluciona problemas de renderizado */
 }
 
 .eje-left {
@@ -397,6 +397,7 @@ canvas {
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
+    -webkit-transform: translateZ(-1); /* Soluciona problemas de renderizado */
 
 
 }
@@ -440,6 +441,7 @@ canvas {
     margin-left: 15em;
     border-radius: 50%;
     background-position: center;
+    -webkit-transform: translateZ(-1); /* Soluciona problemas de renderizado */
 }
 
 .pres2 p {
@@ -453,7 +455,7 @@ canvas {
 }
 
 .fondo-section2 {
-    background-image: url(img/IMG_SAM1980.jpg);
+    background-image: url(img/IMG_SAM2228.jpg);
     filter: brightness(60%);
     background-position: center;
     background-attachment: fixed;
@@ -652,6 +654,7 @@ canvas {
     }
 
     /*sobre mi*/
+   
     .bienvenida2{
         align-items: center;
         padding: 2em;
@@ -676,6 +679,8 @@ canvas {
     .pres3 p{
         width: 15em;
     }
+
+
 
 }
 
