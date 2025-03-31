@@ -525,6 +525,8 @@ canvas {
         width: 100vh;
     }
 
+    
+
     .hamburger{
         position:fixed;
         background-color:transparent;
@@ -672,7 +674,7 @@ canvas {
     }
 
     .pres3 p{
-        width: 10em;
+        width: 15em;
     }
 
 }
