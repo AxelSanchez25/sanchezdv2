@@ -336,8 +336,12 @@ canvas {
      background-attachment:fixed;
      background-repeat: no-repeat;
      background-size: scroll;
-       -webkit-transform: translateZ(-1); /*Soluciona problemas de renderizado */
-}
+       -webkit-transform: translateZ(-1); /*Soluciona problemas de renderizado  */
+   
+} 
+      
+
+
 
 .eje-left {
     height: 20em;
@@ -679,6 +683,44 @@ canvas {
     #carrusel{
         height: 20em;
     }
+    .fondo-section {
+        position: relative;
+        overflow: hidden; /* Evita que la imagen se salga del div */
+    }
+    
+    .fondo-section::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url(img/IMG_SAM1980.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        filter: brightness(40%);
+        transform: translateZ(0); /* Mejora el renderizado en iOS */
+        will-change: transform;
+    }
+    
+    .fondo-section {
+        position: relative;
+        background-image: url(img/IMG_SAM1980.jpg);
+        filter: brightness(40%);
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: scroll; /* Evita problemas en iOS */
+    }
+    
+    @supports (-webkit-touch-callout: none) {
+        /* Aplica solo en iOS */
+        .fondo-section {
+            background-attachment: scroll;
+        }
+    }
+    
 
     /*sobre mi*/
     
