@@ -7,6 +7,18 @@ html{
     scroll-behavior: smooth;
 }
 
+.fondo-section::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('img/IMG_SAM1980.jpg') no-repeat center center;
+    background-size: cover;
+    z-index: -1;
+  } 
+
 @font-face {
     font-family: big;
     src: url(fuentestx/Big_Shoulders_Stencil/BigShouldersStencil-VariableFont_opsz\,wght.ttf);
@@ -318,13 +330,13 @@ canvas {
 }
 
 .fondo-section {
-    background-image: url(img/IMG_SAM1980.jpg);
-    filter: brightness(40%);
+    /* background-image: url(img/IMG_SAM1980.jpg); */
+    /* filter: brightness(40%);
     background-position: center;
     background-attachment: local;
     background-repeat: no-repeat;
     background-size: scroll;
-       -webkit-transform: translateZ(-1); /* Soluciona problemas de renderizado */
+       -webkit-transform: translateZ(-1); Soluciona problemas de renderizado */
 }
 
 .eje-left {
