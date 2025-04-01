@@ -6,18 +6,7 @@
 html{
     scroll-behavior: smooth;
 }
-/*
-.fondo-section::before {
-    content: '';
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: url('img/IMG_SAM1980.jpg') no-repeat center center;
-    background-size: cover;
-    z-index: -1;
-  } */
+
 
 @font-face {
     font-family: big;
@@ -527,16 +516,19 @@ canvas {
     background-size: cover;
     position: relative;
     height: 50vh;
+    filter: blur(10px);
 }
 
 .blogs-tex{
     text-align: center;
     position: absolute;
-    top: 70%;
+    top: 30%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-transform: capitalize;
     font-size: 1.3em;
+    backdrop-filter: none;  
+
 }
 .section-reflexiones{
     display: flex;
@@ -683,6 +675,18 @@ canvas {
     #carrusel{
         height: 20em;
     }
+    /*
+.fondo-section::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('img/IMG_SAM1980.jpg') no-repeat center center;
+    background-size: cover;
+    z-index: -1;
+  } */
     .fondo-section {
         position: relative;
         overflow: hidden; /* Evita que la imagen se salga del div */
