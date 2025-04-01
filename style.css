@@ -6,7 +6,7 @@
 html{
     scroll-behavior: smooth;
 }
-
+/*
 .fondo-section::before {
     content: '';
     position: fixed;
@@ -17,7 +17,7 @@ html{
     background: url('img/IMG_SAM1980.jpg') no-repeat center center;
     background-size: cover;
     z-index: -1;
-  } 
+  } */
 
 @font-face {
     font-family: big;
@@ -330,13 +330,13 @@ canvas {
 }
 
 .fondo-section {
-    /* background-image: url(img/IMG_SAM1980.jpg); */
-    /* filter: brightness(40%);
-    background-position: center;
-    background-attachment: local;
-    background-repeat: no-repeat;
-    background-size: scroll;
-       -webkit-transform: translateZ(-1); Soluciona problemas de renderizado */
+     background-image: url(img/IMG_SAM1980.jpg); 
+     filter: brightness(40%);
+     background-position:center;
+     background-attachment:fixed;
+     background-repeat: no-repeat;
+     background-size: scroll;
+       -webkit-transform: translateZ(-1); /*Soluciona problemas de renderizado */
 }
 
 .eje-left {
@@ -405,12 +405,9 @@ canvas {
     background-image: url(img/IMG_SAM2228.jpg);
     background-position: top;
     filter: brightness(60%);
-    background-attachment: local;
+    background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: scroll;
-    -webkit-transform: translateZ(-1); /* Soluciona problemas de renderizado */
-
-
 }
 
 .bienvenida2 {
@@ -469,9 +466,9 @@ canvas {
     background-image: url(img/IMG_SAM2228.jpg);
     filter: brightness(60%);
     background-position: center;
-    background-attachment: local;
+    background-attachment: fixed;
     background-repeat: no-repeat;
-    background-size: scroll;
+    background-size: cover;
 
 }
 
