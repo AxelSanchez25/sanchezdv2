@@ -323,7 +323,7 @@ canvas {
     background-position: center;
     background-attachment: fixed;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: scroll;
        -webkit-transform: translateZ(-1); /* Soluciona problemas de renderizado */
 }
 
@@ -392,11 +392,10 @@ canvas {
 .section-bienvenida2 {
     background-image: url(img/IMG_SAM2228.jpg);
     background-position: top;
-    background-size: cover;
     filter: brightness(60%);
     background-attachment: fixed;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: scroll;
     -webkit-transform: translateZ(-1); /* Soluciona problemas de renderizado */
 
 
@@ -460,7 +459,7 @@ canvas {
     background-position: center;
     background-attachment: fixed;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: scroll;
 
 }
 
@@ -658,11 +657,10 @@ canvas {
 .section-bienvenida2 {
     background-image: url(img/IMG_SAM2228.jpg);
     background-position: top;
-    background-size: cover;
     filter: brightness(60%);
     background-attachment: fixed;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: scroll;
     -webkit-transform: translateZ(-1); /* Soluciona problemas de renderizado */
 
 
