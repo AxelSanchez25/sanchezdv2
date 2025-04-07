@@ -142,16 +142,36 @@ canvas {
 }
 
 .bienvenida img {
-    height: 100%;
+    height: 100vh;
+    object-fit: cover;
     width: 100%;
-    filter: brightness(40%);
+    filter: brightness(70%);
+    object-position: 0% 8%;
+    mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 70%, rgba(0, 0, 0, 0) 100%);
+    -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 70%, rgba(0, 0, 0, 0) 100%);
+    animation: subir 2.5s  ease-in-out infinite;
+}
+
+@keyframes subir{
+
+
+    0%{
+        transform: translateY(0px)
+    }
+    50%{
+        transform: translateY(-10px)
+    }
+    100%{
+        transform: translateY(0px)
+    }
+ 
 }
 
 
 .word { 
     border-bottom: 4px solid #5500b6;
     position: absolute;
-    bottom: 5em;
+    bottom: 2.5em;
     font-family: roboto;
     font-size: 60px;
     color: rgb(255, 255, 255);
