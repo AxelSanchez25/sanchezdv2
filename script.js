@@ -217,10 +217,10 @@ const nav = document.querySelector("nav");
 // Escuchamos el evento de desplazamiento
 window.addEventListener("scroll", () => {
   if (window.scrollY > 1100) { // Si el desplazamiento supera los 50px
-    nav.style.height = "20px"; // Cambia el tamaño de la barra de navegación
+    nav.style.height = "30px"; // Cambia el tamaño de la barra de navegación
     nav.style.backgroundColor = "#00000079"; // Cambia el color a rojo
   } else {
-    nav.style.height = "50px"; // Tamaño original cuando estás al principio
+    nav.style.height = "30px"; // Tamaño original cuando estás al principio
     nav.style.backgroundColor = "black"; // Cambia el color a azul
   }
 });
