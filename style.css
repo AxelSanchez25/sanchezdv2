@@ -27,7 +27,9 @@ body {
     background-color: rgba(0, 0, 0, 0.945);
     font-family: Poppins;
     color: white;
+   
 }
+
 
 /*este es el fondo */
 canvas {
@@ -186,6 +188,7 @@ canvas {
     display: inline-block;
     vertical-align: middle;
     text-transform: capitalize;
+    animation: brillar 5s infinite;
 }
 
 .word:before {
@@ -246,6 +249,23 @@ canvas {
     line-height: 1.5em;
     font-size: 5em;
     letter-spacing: 45px;
+    animation: brillar 5s infinite;
+}
+
+@keyframes brillar {
+
+
+    0% {
+        text-shadow: white 0px 0px 20px;
+    }
+
+    50% {
+        text-shadow: white 0px 0px 0px;
+    }
+
+    100% {
+        text-shadow: white 0px 0px 20px;
+    }
 
 }
 
