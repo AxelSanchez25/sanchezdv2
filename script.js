@@ -204,9 +204,11 @@ setInterval(function(){
   if( counter == words.length) {
     counter = 0;
   }
-
-}, 150);
+///ASINCRONISMO
+}, 300);
 }
+
+
 
 
 
