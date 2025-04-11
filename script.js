@@ -205,7 +205,7 @@ setInterval(function(){
     counter = 0;
   }
 ///ASINCRONISMO
-}, 300);
+}, 200);
 }
 
 

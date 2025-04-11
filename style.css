@@ -178,7 +178,7 @@ canvas {
 .word {
     border-bottom: 4px solid #5500b677;
     position: absolute;
-    bottom: 1.2em;
+    bottom: 1.5em;
     font-family: big;
     font-size: 90px;
     color: rgb(255, 255, 255);
@@ -208,7 +208,7 @@ canvas {
     bottom: 2rem;
     left: 50%;
     transform: translateX(-50%);
-    font-size: 2rem;
+    font-size: 4rem;
     color: white;
     text-decoration: none;
     animation: bounce 2s infinite;
@@ -229,6 +229,8 @@ canvas {
 
     40% {
         transform: translateX(-50%) translateY(-30px);
+        color: rgba(0, 0, 0, 0.473);
+
     }
 
     60% {
@@ -323,7 +325,6 @@ canvas {
     /* Centra la imagen */
     filter: brightness(80%);
     overflow: hidden;
-
 }
 
 /* .carrusel-button {
