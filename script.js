@@ -263,3 +263,31 @@ menu.addEventListener('click', toggleMenu, false);
 });*/
 
 
+// 1. Selecciona todas las imágenes de la galería
+const images = document.querySelectorAll('.img-s img');
+// 2. Selecciona el modal, la imagen dentro del modal y el botón de cerrar
+
+const modal = document.getElementById('modal');
+const modalImg = document.getElementById('modal-img');
+const closeBtn = document.getElementById('closeBtn');
+
+// 3. Por cada imagen, añade un evento al hacer click
+images.forEach(img => {
+  img.addEventListener('click', () => {
+    modal.style.display = 'flex';// Muestra el modal
+    modalImg.src = img.src;   // Cambia la imagen del modal al src clickeado
+  });
+});
+
+// 4. Botón de cerrar: oculta el modal
+closeBtn.addEventListener('click', () => {
+  modal.style.display = 'none';
+});
+
+// 5. Si haces clic fuera de la imagen (en el fondo oscuro), también se cierra
+modal.addEventListener('click', (e) => {
+  // Cierra el modal si haces clic fuera de la imagen
+  if (e.target === modal) {
+    modal.style.display = 'none';
+  }
+});

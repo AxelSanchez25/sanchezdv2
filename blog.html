@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
+
 <body>
     <header class="header">
         <nav class="nav">
@@ -27,34 +29,98 @@
         </nav>
     </header>
     <main>
-        <canvas></canvas>
+
         <section>
-            <article >
+            <canvas></canvas>
+            <article>
                 <div class="fondo-blog"></div>
                 <div class="blogs-tex">
                     <h2>blogs</h2>
                     <p>bienvenido a mi blogs aqui encontraras toda la información relacionada con mi trabajo</p>
                 </div>
             </article>
-        </section>
-        <section class="section-reflexiones">
-            <article class="reflexiones">
-                <h2>momentos de reflexión</h2>
-                <iframe width="460" height="215" src="https://www.youtube.com/embed/kIQJVWimZxo?si=xRCRKATcNqt23Qph" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <article class="blog-conten">
+                <div class="card-blog">
+                    <h2>nuevos comienzos</h2>
+                    <p>En 2018 comencé a aprender programación. Recuerdo mirar a otros entender rápido lo que a mí me
+                        costaba horas. Me sentí inútil, fuera de lugar… y en 2019 lo dejé.
+
+                        Pero algo en mí no quería rendirse. En 2020 lo retomé, aún con dudas, aún sintiéndome lento. A
+                        duras penas logré graduarme del bachillerato y en 2021 trabajé en construcción. Ese trabajo me
+                        hizo comprender que no era el camino que queria seguir. </p>
+
+                    <p> En 2022 comencé la carrera de Ingeniería en Sistemas. Estudié Programación Orientada a Objetos y
+                        bases de datos. Por primera vez sentí que estaba en el camino correcto. Pero en 2023, por
+                        motivos económicos, tuve que pausar todo nuevamente.</p>
+
+                    <p> Y no ha sido sino hasta este 2025 que he vuelto a retomar el rumbo. Este año ha sido un sube y
+                        baja de emociones, pero también un punto de inflexión muy importante en mi vida. Cabe destacar
+                        que nada de esto hubiera sido posible sin la guía de mi maestro, Iker Álvarez. Él inyectó en mí
+                        eso que me faltaba: pasión. Me enseñó que sí, es difícil, pero que vale la pena. Me mostró un
+                        método de estudio que realmente funciona, y poco a poco me ayudó a cogerle cariño al
+                        aprendizaje. No sé cómo explicarlo del todo, pero su motivación me empujó a seguir, a querer
+                        saber más, a no rendirme.</p>
+
+                    <p>
+                        En la vida, a veces nos encontramos con una persona que, con cariño y actitud, nos muestra cómo
+                        mejorar y cómo amar eso que alguna vez pensamos imposible. Puede sonar insignificante para
+                        algunos… pero para mí, hizo una gran diferencia. muchas Gracias Iker. <span>"finge hasta que lo
+                            sientas"</span> nunca se me olvira esa frase.
+                    </p>
+
+                    <p> Aprender a programar no es fácil. No soy un experto, pero he comprendido que esta carrera es una
+                        de constante aprendizaje. No se trata de llegar rápido, sino de no detenerse.
+
+                        A veces me pregunto si entendí esto muy tarde… pero la verdad es que ha valido la pena cada
+                        paso, cada caída, cada regreso.
+
+                        Ya han pasado cinco años desde aquel primer intento. Hoy empiezo este blog como un nuevo punto
+                        de partida. No empecé tarde, simplemente me detuve… cuando el mundo siguió. Pero aquí estoy,
+                        otra vez.
+
+                        Este blog es para ti, que estás comenzando, que tal vez sientes que vas lento, que no entiendes
+                        nada. Quiero que sepas que lo difícil no es imposible.
+
+                        Acompáñame en este viaje. Vamos a crecer juntos. de cero hasta full stack.</p>
+
+                    <img src="img/web.JPG" alt="">
+
+                </div>
+                <div class="card-blog2">
+                    <h2>proximamente</h2>
+                </div>
             </article>
-        </section>
-        <section class="section-programacion-tecnologia">
-            <article class="programacion-tecnologia">
-                <h2>programacion y tecnoloía</h2>
-                <iframe width="460" height="215" src="https://www.youtube.com/embed/kIQJVWimZxo?si=xRCRKATcNqt23Qph" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <article class="cardds">
+                <h2>capturas</h2>
+
+                <div class="cont-img">
+                    <div class="img-s">
+                        <img src="img/IMG_SAM2228.jpg"
+                            alt="">
+                        <img src="img/IMG_0419.JPG" alt="">
+                        <img src="img/IMG_SAM0455.jpg"
+                            alt="">
+                        <img src="img/IMG_0426.JPG" alt="">
+                        <img src="img/IMG_0398.JPG" alt="">
+                        <img src="img/IMG_SAM1478.JPG" alt="">
+                    </div>
+                </div>
+                <div class="modal-img" id="modal">
+                    <span class="close" id="closeBtn">&times;</span>
+                    <img class="modal-content" id="modal-img">
+                    <!-- Explicación:
+               <article class="cont-img">: Contenedor principal de la galería.
+               <div class="img-s">: Cuadrícula de imágenes.
+               <div class="modal-img">: Recuadro que se muestra encima de todo cuando haces clic.
+               <span class="close">: Botón para cerrar la imagen.
+               <img class="modal-content">: La imagen grande que se muestra. -->
+                </div>
+
             </article>
+
         </section>
-        <section class="section-reflexiones">
-            <article class="reflexiones">
-                <h2>momentos de reflexión</h2>
-                <iframe width="460" height="215" src="https://www.youtube.com/embed/kIQJVWimZxo?si=xRCRKATcNqt23Qph" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            </article>
-        </section>
+
+
     </main>
     <footer class="footer">
         <div class="footer1">
@@ -63,4 +129,5 @@
     </footer>
     <script src="script.js"></script>
 </body>
+
 </html>

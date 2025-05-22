@@ -22,6 +22,7 @@ html {
     font-family: Poppins;
     src: url(fuentestx//Poppins/Poppins-Light.ttf);
 }
+
 @font-face {
     font-family: Orbitron;
     src: url(fuentestx/Orbitron/Orbitron-VariableFont_wght.ttf);
@@ -31,7 +32,7 @@ body {
     background-color: rgba(0, 0, 0, 0.945);
     font-family: Poppins;
     color: white;
-   
+
 }
 
 
@@ -400,6 +401,11 @@ canvas {
     height: 35em;
     margin: 2em;
     box-shadow: 1px 1px 20px rgba(84, 0, 168, 0.511);
+    transition: 0.5s all;
+}
+
+.cards-prods:hover{
+    transform: translateY(-10px);
 }
 
 .cards-prods img {
@@ -585,18 +591,131 @@ canvas {
 
 }
 
-.section-reflexiones {
+.blog-conten {
+    height: auto;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+}
+
+.card-blog {
+    padding: 2em;
+    margin: 4em;
+    height: auto;
+    width: auto;
     display: flex;
     align-items: center;
     flex-direction: column;
-    justify-content: center;
-    height: 40em;
+    border-radius: 1%;
+    background-color: rgba(0, 0, 0, 0.486);
+     transition: 0.5s all;
 }
 
-.reflexiones {
-    text-align: center;
+.card-blog2{
+    padding: 2em;
+    margin: 4em;
+    height: auto;
+    width: auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 1%;
+    background-color: rgba(0, 0, 0, 0.486);
+    transition: 0.5s all;
+}
+
+.card-blog:hover{
+    transform: translateY(-5px);
+}
+
+.card-blog2:hover{
+    transform: translateY(-5px);
+}
+
+.card-blog h2{
     text-transform: uppercase;
-    padding: 1em;
+    font-size: 2em;
+}
+
+.card-blog p{
+    margin: 1em;
+    text-transform: capitalize;
+    text-align: start;
+    line-height: 2em;
+    font-size: 1.2em;
+}
+
+.card-blog img{
+    height: 20em;
+}
+
+.blog-conten2{
+    height: 100vh;
+}
+
+.cardds{
+    height: auto;
+    margin: 2em;
+}
+
+.cont-img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.img-s {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 5px;
+}
+
+.img-s img {
+  height: 20em;
+  object-fit: cover;
+  width: 100%;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.img-s img:hover {
+  transform: scale(1.02);
+  /* Efecto zoom al pasar el mouse */
+}
+/* Estilo del modal */
+.modal-img {
+  display: none;
+  /* Oculto por defecto */
+  position: fixed;
+  /* Se queda fijo aunque hagas scroll */
+  z-index: 1000;
+  /* Se muestra por encima de todo */
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.9);
+  /* Fondo oscuro */
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-img img {
+  max-width: 90%;
+  max-height: 80vh;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+  border-radius: 5px;
+}
+
+.close {
+  position: absolute;
+  top: 20px;
+  right: 40px;
+  font-size: 40px;
+  color: white;
+  cursor: pointer;
 }
 
 /* Móvil (menor a 768px) */
