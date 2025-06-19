@@ -1,3 +1,41 @@
+// Crea el div del cursor solo si no existe
+if (!document.querySelector('.cursor')) {
+  const cursor = document.createElement('div');
+  cursor.className = 'cursor';
+  document.body.appendChild(cursor);
+}
+
+const cursor = document.querySelector('.cursor'); // Usa el ya creado
+
+// Movimiento suave
+let mouseX = 0, mouseY = 0, posX = 0, posY = 0;
+
+document.addEventListener("mousemove", e => {
+  mouseX = e.clientX;
+  mouseY = e.clientY;
+});
+
+function updateCursor() {
+  posX += (mouseX - posX) * 0.15;
+  posY += (mouseY - posY) * 0.15;
+  cursor.style.left = posX + "px";
+  cursor.style.top = posY + "px";
+  requestAnimationFrame(updateCursor);
+}
+updateCursor();
+
+// Efecto hover
+const addHoverEvents = () => {
+  const hoverEls = document.querySelectorAll("a, button, .hover-target");
+  hoverEls.forEach(el => {
+    el.addEventListener("mouseenter", () => cursor.classList.add("hovered"));
+    el.addEventListener("mouseleave", () => cursor.classList.remove("hovered"));
+  });
+};
+window.addEventListener("load", addHoverEvents);
+
+
+
 ////slider-carrusel de imagenes 
 let carrusel = document.querySelector('.carrusel-container');
 if (!carrusel) {
@@ -291,3 +329,4 @@ modal.addEventListener('click', (e) => {
     modal.style.display = 'none';
   }
 });
+
