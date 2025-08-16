@@ -739,6 +739,18 @@ canvas {
     cursor: pointer;
 }
 
+/*porfolio*/
+.porfolio-contenido{
+    height: 30em;
+    width: 30em;
+    background-color: #ffffff;
+}
+.img-porfolio1 img{
+    height: 30em;
+    width: 30em;
+    object-fit: cover;
+}
+
 /* Móvil (menor a 768px) */
 @media screen and (max-width: 768px) {
 
