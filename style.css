@@ -24,9 +24,16 @@ html {
 }
 
 @font-face {
+    font-family: Poppins-black;
+    src: url(fuentestx//Poppins/Poppins-Black.ttf);
+}
+
+@font-face {
     font-family: Orbitron;
     src: url(fuentestx/Orbitron/Orbitron-VariableFont_wght.ttf);
 }
+
+
 
 body {
     background-color: rgba(0, 0, 0, 0.945);
@@ -161,26 +168,49 @@ canvas {
 
 }
 
-
-
 .bienvenida {
     height: 100vh;
     width: auto;
     display: flex;
     align-items: center;
     flex-direction: column;
+    justify-content: center;
     justify-items: center;
+    background-color: #ffffff;
+    position: relative;
 }
 
-.bienvenida img {
+.titulo_principal h1{
+    font-family: Poppins-black;
+    text-transform: uppercase;
+    font-size: 18em;
+    font-weight:900;
+    color: #000000;
+}
+
+
+.portada-anime{
+    position: absolute;
+}
+
+.portada-anime img {
     height: 100vh;
     object-fit: cover;
-    width: 100%;
+    width: auto;
     filter: brightness(70%);
     object-position: 0% 8%;
     mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 70%, rgba(0, 0, 0, 0) 100%);
     -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 70%, rgba(0, 0, 0, 0) 100%);
     animation: subir 2.5s ease-in-out infinite;
+}
+
+.banner1{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
 }
 
 @keyframes subir {
@@ -207,7 +237,7 @@ canvas {
     bottom: 1.5em;
     font-family: Orbitron;
     font-size: 90px;
-    color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
     line-height: 1.4em;
     height: 1.2em;
     padding: 0 14px 0 7px;
@@ -401,6 +431,8 @@ canvas {
     /*Soluciona problemas de renderizado  */
 
 }
+
+
 
 
 
