@@ -232,7 +232,7 @@ canvas {
 }
 
 
-.word {
+/* .word {
     border-bottom: 4px solid #5500b677;
     position: absolute;
     bottom: 1.5em;
@@ -257,6 +257,8 @@ canvas {
     bottom: 5px;
     right: 7px;
 }
+ */
+
 
 
 
@@ -432,10 +434,6 @@ canvas {
     /*Soluciona problemas de renderizado  */
 
 }
-
-
-
-
 
 
 .eje-left {
@@ -687,7 +685,8 @@ canvas {
     transform: translateY(-5px);
 }
 
-.card-blog h2 {
+.card-blog,
+.card-blog2 h2 {
     text-transform: uppercase;
     font-size: 2em;
 }
@@ -737,6 +736,35 @@ canvas {
     transform: scale(1.02);
     /* Efecto zoom al pasar el mouse */
 }
+
+.cardds h1 {
+    text-transform: uppercase;
+}
+
+.video-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 640px;
+    cursor: pointer;
+}
+
+.video-wrapper img {
+    width: 100%;
+    display: block;
+}
+
+.play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 3rem;
+    background: none;
+    border: none;
+    color: white;
+    text-shadow: 0 0 10px black;
+}
+
 
 /* Estilo del modal */
 .modal-img {
@@ -790,6 +818,7 @@ canvas {
     position: relative;
     overflow: hidden;
     cursor: pointer;
+    border-radius: 4px;
 }
 
 .portfolio-item img {
@@ -805,8 +834,8 @@ canvas {
     left: 0;
     right: 0;
     top: 0;
-    background: rgba(0, 0, 0, 0.6);
-    color: white;
+    background: rgba(255, 255, 255, 0.6);
+    color: rgb(0, 0, 0);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -815,6 +844,8 @@ canvas {
     padding: 20px;
     text-align: center;
     font-size: 1.2rem;
+    border-radius: 4px;
+    font-weight: bold;
 }
 
 .portfolio-item:hover img {
@@ -857,7 +888,19 @@ canvas {
         width: 100vh;
     }
 
+    .portada-anime {
+        height: 100dvh;
+    }
 
+    .portada-anime img {
+        height: 70%;
+    }
+
+    .titulo_principal h1 {
+        margin-top: 9em;
+        font-size: 4em;
+
+    }
 
     .hamburger {
         position: fixed;
@@ -1090,6 +1133,55 @@ canvas {
 
     .pres3 p {
         width: 15em;
+    }
+
+    .blog-conten {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        /* o flex si prefieres */
+    }
+
+    .card-blog {
+        height: auto;
+        padding: 4em;
+        margin: 0;
+    }
+
+    .card-blog,
+    .card-blog2 {
+        margin-bottom: 20px;
+    }
+
+    .blog-conten {
+        transition: all 0.3s ease-in-out;
+    }
+
+    .card-blog img {
+        height: 5em;
+    }
+
+    .card-blog p {
+        font-size: 10px;
+    }
+
+    .img-s {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 5px;
+        margin-top: 2em;
+    }
+
+    .img-s img {
+        height: 10em;
+    }
+
+    .cardds {
+        height: 100dvb;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
     }
 
 

@@ -208,43 +208,44 @@ class RunningLine {
 window.onload = screenInit
 
 //////////////////////prueba tex 
-const wordWrapper = document.getElementById('word');
-if (!wordWrapper) {
-    console.error('El elemento con ID "word" no existe en el DOM.');
-} else {
-    // Tu código actual aquí
-    var words = ['hola','bienvenido', 'a', 'mi', 'web'],
-    wordWrapperContent = wordWrapper.innerHTML,
-    addingWord = false,
-    counter = 1;
+// const wordWrapper = document.getElementById('word');
+// if (!wordWrapper) {
+//     console.error('El elemento con ID "word" no existe en el DOM.');
+// } else {
+//     // Tu código actual aquí
+//     var words = ['hola','bienvenido', 'a', 'mi', 'web'],
+//     wordWrapperContent = wordWrapper.innerHTML,
+//     addingWord = false,
+//     counter = 1;
 
-setInterval(function(){
+// setInterval(function(){
 
-  if(wordWrapperContent.length > 0 && !addingWord ) {
-    wordWrapper.innerHTML = wordWrapperContent.slice(0, -1);
-    wordWrapperContent = wordWrapper.innerHTML;
-  } else {
-    addingWord = true;
-  }
+//   if(wordWrapperContent.length > 0 && !addingWord ) {
+//     wordWrapper.innerHTML = wordWrapperContent.slice(0, -1);
+//     wordWrapperContent = wordWrapper.innerHTML;
+//   } else {
+//     addingWord = true;
+//   }
 
-  if( addingWord ){
-    if( wordWrapperContent.length < words[counter].length  ) {
-      wordWrapper.innerHTML = words[counter].slice(0, wordWrapperContent.length + 1);
-      wordWrapperContent = wordWrapper.innerHTML;
-    } else {
-      if( counter < words.length) {
-        counter ++
-      }
-      addingWord = false;
-    }
-  }
+//   if( addingWord ){
+//     if( wordWrapperContent.length < words[counter].length  ) {
+//       wordWrapper.innerHTML = words[counter].slice(0, wordWrapperContent.length + 1);
+//       wordWrapperContent = wordWrapper.innerHTML;
+//     } else {
+//       if( counter < words.length) {
+//         counter ++
+//       }
+//       addingWord = false;
+//     }
+//   }
 
-  if( counter == words.length) {
-    counter = 0;
-  }
-///ASINCRONISMO
-}, 200);
-}
+//   if( counter == words.length) {
+//     counter = 0;
+//   }
+// ///ASINCRONISMO
+// }, 200);
+// }
+
 
 
 
@@ -330,3 +331,17 @@ modal.addEventListener('click', (e) => {
   }
 });
 
+//video de youtube
+
+document.querySelectorAll('.video-wrapper').forEach(wrapper => {
+  wrapper.addEventListener('click', () => {
+    const videoId = wrapper.dataset.id;
+    const iframe = document.createElement('iframe');
+    iframe.setAttribute('src', `https://www.youtube.com/embed/${videoId}?autoplay=1`);
+    iframe.setAttribute('frameborder', '0');
+    iframe.setAttribute('allowfullscreen', '');
+    iframe.setAttribute('allow', 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture');
+    wrapper.innerHTML = '';
+    wrapper.appendChild(iframe);
+  });
+});
